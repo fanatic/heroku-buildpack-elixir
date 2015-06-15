@@ -1,12 +1,12 @@
 function erlang_tarball() {
-  echo "OTP-${erlang_version}.tar.gz"
+  echo "otp-OTP-${erlang_version}.tar.gz"
 }
 
 
 function download_erlang() {
-  erlang_package_url="http://pkgs.fedoraproject.org/repo/pkgs/erlang/otp-OTP-17.4.tar.gz/0d06e7d3802d63992535116e4d37c1a4/otp-OTP-17.4.tar.gz"
+  erlang_package_url="http://pkgs.fedoraproject.org/repo/pkgs/erlang/otp-OTP-17.4.tar.gz/0d06e7d3802d63992535116e4d37c1a4"
 
-  #erlang_package_url="${erlang_package_url}/$(erlang_tarball)"
+  erlang_package_url="${erlang_package_url}/$(erlang_tarball)"
 
   # If a previous download does not exist, then always re-download
   if [ ! -f ${cache_path}/$(erlang_tarball) ]; then
