@@ -39,6 +39,9 @@ function install_erlang() {
   mkdir -p /app/.platform_tools
   ln -s $(erlang_build_path) /app/.platform_tools/erlang
   $(erlang_build_path)/otp/Install -minimal /app/.platform_tools/erlang
+  
+  find /app/.platform_tools/erlang | grep erl
+  echo $(erlang_path)/bin
 
   cp -R $(erlang_build_path) $(erlang_path)
   PATH=$(erlang_path)/bin:$PATH
