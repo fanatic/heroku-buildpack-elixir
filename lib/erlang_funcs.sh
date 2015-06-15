@@ -1,5 +1,5 @@
 function erlang_tarball() {
-  echo "otp-OTP-${erlang_version}.tar.gz"
+  echo "otp-OTP-17.4.tar.gz"
 }
 
 
