@@ -1,10 +1,10 @@
 function erlang_tarball() {
-  echo "otp-OTP-17.4.tar.gz"
+  echo "master.tgz"
 }
 
 
 function download_erlang() {
-  erlang_package_url="http://pkgs.fedoraproject.org/repo/pkgs/erlang/otp-OTP-17.4.tar.gz/0d06e7d3802d63992535116e4d37c1a4"
+  erlang_package_url="https://s3.amazonaws.com/heroku-buildpack-erlang"
 
   erlang_package_url="${erlang_package_url}/$(erlang_tarball)"
 
